@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- <script src="https://kit.fontawesome.com/c95f218ea9.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="{% static 'mainapp/css/main.css' %}" >
+
+</head>
+<body>
+    <aside>
+        <img src="{% static 'mainapp/img/logo_lst.png' %}" alt="logo" >
+        <span class="logo_name">Сайт ЛСТ</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}">
+                <li><i class="fa-solid fa-house"></i>Главная</li>
+            </a>
+            <a href="{% url 'about' %}">
+                <li><i class="fa-solid fa-address-card"></i>О нас</li>
+            </a>
+            <a href="/contact">
+                <li><i class="fa-regular fa-address-book"></i>Контакты</li>
+            </a>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
