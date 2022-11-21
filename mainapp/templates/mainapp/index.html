@@ -1,12 +1,12 @@
 ﻿{% extends 'mainapp/layout.html'%}
 
-{% block title %} {{ title }} {% endblock %}
+{% block title %} Главная ЛСТ{% endblock %}
 
 {% block content %}
     <div class="features">
-        <h1>{{ title }}</h1>
+        <h1>Главная ЛСТ</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate necessitatibus deleniti mollitia tenetur culpa nobis reprehenderit exercitationem, quo quidem est rem tempora quasi excepturi quas sit assumenda labore sequi quisquam.</p>
-        <button class="btn btn-warning">На страницу про нас </button>
+        <a href="{% url 'about' %}"><button class="btn btn-warning">На страницу про нас </button></a>
         
         {% for val in values %}
             {% if val == 'hello' %}

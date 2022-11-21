@@ -1,0 +1,20 @@
+﻿{% extends 'mainapp/layout.html'%}
+
+{% block title %} Новости на сайте{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Новости на сайте ЛСТ</h1>
+        {% if news %}
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+                <p>У вас нет новостей</p>
+        {% endif %}
+        <a href="{% url 'home' %}"><button class="btn btn-danger">На главную </button></a>
+     </div> 
+{% endblock %}

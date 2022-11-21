@@ -25,8 +25,14 @@
             <a href="{% url 'about' %}">
                 <li><i class="fa-solid fa-address-card"></i>О нас</li>
             </a>
-            <a href="/contact">
+            <a href="{% url 'contact' %}">
                 <li><i class="fa-regular fa-address-book"></i>Контакты</li>
+            </a>
+            <a href="{% url 'news_home' %}">
+                <li><i class="fa-regular fa-newspaper"></i>Новости</li>
+            </a>
+            <a href="{% url 'create' %}">
+                <li><button class="btn btn-outline-dark"><i class="fa-solid fa-circle-plus"></i>Добавить новость</button></li>
             </a>
         </ul>
     </aside>
